@@ -506,7 +506,7 @@ if __name__=="__main__":
 		BOOKS.extend(DB)
 		sp_available = shutil.disk_usage("/")[2]
 		if sp_available < 8787838196:
-			print("ERROR: NOT ENOUGH FREE SPACE LEFT...WILL NOT PROCEED")
+			print("ERROR: THIS DOWNLOAD REQUIRES AT LEAST 8.2GB OF FREE SPACE...WILL NOT PROCEED")
 			exit()
 			
 	print("RUNNING...", end = '', flush=True)	
