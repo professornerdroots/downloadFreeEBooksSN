@@ -454,7 +454,7 @@ def download_book(url):
 		autor   = autor[nautor-1].strip(" _-")	
 		s_autor = "_"+autor[:20]
 	
-		rexpf = re.compile("[\(\),®:.—']")
+		rexpf = re.compile("[\(\),®:.—'\"?*<>|!;]")
 		
 		filename = s_title+s_autor
 		filename = rexpf.sub("",filename).replace("&","and").replace("@","at")
