@@ -9,6 +9,7 @@ import sys
 import os
 import re
 import wget
+import shutil
 
 # VARIABLES
 BOOKS     = []
@@ -502,8 +503,12 @@ if __name__=="__main__":
 		except:
 			print("ERROR: %s NOT FOUND...WILL NOT PROCEED"%sys.argv[1])	
 	else:	
-		BOOKS.extend(DB)	
-	
+		BOOKS.extend(DB)
+		sp_available = shutil.usage("/")[2]
+		if sp_available < 8787838196:
+			print("ERROR: NOT ENOUGH FREE SPACE LEFT")
+			exit()
+			
 	print("RUNNING...", end = '', flush=True)	
 	opdf        = open("log.txt","w",1)
 	N           = len(BOOKS)
