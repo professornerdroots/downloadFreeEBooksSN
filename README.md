@@ -7,7 +7,7 @@ The full list of English e-books released by Springer Nature is downloadable by 
 ```
 $ python downloadFreeEBooksSN
 ```
-To download other free e-books from Springer Nature, provide a text file containing a book url per line, like here: 
+To download other free e-books from Springer Nature, provide a text file containing a book *url* per line, like here: 
 ```
 $ python downloadFreeEBooksSN textfile
 ```
