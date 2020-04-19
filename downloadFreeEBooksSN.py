@@ -436,7 +436,7 @@ def download_book(url):
 	
 		doc = html.fromstring( page.read() )
 	
-		rexpt = re.compile("[ \\\\/]")		
+		rexpt = re.compile("[ \\\\/\-]")		
 		
 		title = doc.xpath("//div[@data-test='book-title']//text()")
 		for i in range(0,len(title)):
@@ -453,7 +453,10 @@ def download_book(url):
 		autor   = autor[nautor-1].strip(" _-")	
 		s_autor = "_"+autor[:20]
 	
+		rexpf = re.compile("[\(\),®:.—']")
+		
 		filename = s_title+s_autor
+		filename = rexpf.sub("",filename).replace("&","and").replace("@","at")
 		
 		link = doc.xpath("//div/a[@title='Download this book in PDF format']")
 		if link==None or len(link)==0:
