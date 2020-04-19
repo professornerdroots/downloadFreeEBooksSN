@@ -5,11 +5,11 @@ Automatically download huge lists of free PDF e-books released by Springer Natur
 ## How to Run
 The full list of English e-books released by Springer Nature is downloadable by just running the code, like here:
 ```
-$ python downloadFreeEBooksSN
+$ python downloadFreeEBooksSN.py
 ```
 To download other free e-books from Springer Nature, provide a text file containing a book *url* per line, like here: 
 ```
-$ python downloadFreeEBooksSN textfile
+$ python downloadFreeEBooksSN.py textfile
 ```
 
 ### Required Python Modules 
