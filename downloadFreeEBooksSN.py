@@ -521,4 +521,4 @@ if __name__=="__main__":
 	
 	opdf.close()	
 
-	print("\nDOWNLOADING CONCLUDED! SEE log.txt FOR INFO")
+	print("\nDOWNLOAD CONCLUDED! SEE log.txt FOR INFO")
