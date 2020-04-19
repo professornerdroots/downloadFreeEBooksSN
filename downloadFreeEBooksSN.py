@@ -501,7 +501,8 @@ if __name__=="__main__":
 		try:
 			BOOKS.extend(open(sys.argv[1]).readlines()) 
 		except:
-			print("ERROR: %s NOT FOUND...WILL NOT PROCEED"%sys.argv[1])	
+			print("ERROR: %s NOT FOUND...WILL NOT PROCEED"%sys.argv[1])
+			exit()
 	else:	
 		BOOKS.extend(DB)
 		sp_available = shutil.disk_usage(os.getcwd())[2]
