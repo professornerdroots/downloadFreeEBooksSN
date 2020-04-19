@@ -504,7 +504,7 @@ if __name__=="__main__":
 			print("ERROR: %s NOT FOUND...WILL NOT PROCEED"%sys.argv[1])	
 	else:	
 		BOOKS.extend(DB)
-		sp_available = shutil.disk_usage("/")[2]
+		sp_available = shutil.disk_usage(os.getcwd())[2]
 		if sp_available < 8787838196:
 			print("ERROR: THIS DOWNLOAD REQUIRES AT LEAST 8.2GB OF FREE SPACE...WILL NOT PROCEED")
 			exit()
