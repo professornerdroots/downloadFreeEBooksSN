@@ -506,7 +506,7 @@ if __name__=="__main__":
 	N           = len(BOOKS)
 	downloaded  = 0	
 	for book in range(0,N):
-		r,s = download_book(BOOKS[book]).split("|")
+		r,s = download_book(BOOKS[book].strip()).split("|")
 		downloaded += int(s)
 		opdf.write("%3d of %d %s\n"%(book+1,N,r))
 		print("\rRUNNING...%5.1f%% COMPLETE - %d of %d BOOKS DOWNLOADED"%(100*(book+1)/N,downloaded,N), end = '')
